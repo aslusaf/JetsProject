@@ -1,0 +1,5 @@
+Passenger Jet,Boeing 747,614,8357,386800000
+Passenger Jet,Airbus A380,737,9444,450000000
+Passenger,Airbus A320,528,9569,250000000
+Passenger,Boeing 737,579,7273,262000000
+Air-Launch-To-Orbit,Stratolaunch Roc,530,1151,400000000
