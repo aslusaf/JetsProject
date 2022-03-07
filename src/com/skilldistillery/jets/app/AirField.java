@@ -140,6 +140,13 @@ public class AirField {
 		
 	}
 	
+	public void selectAircraftBanner() {
+		
+		System.out.print("\u250c"); for (int i = 0; i < 100; i++) System.out.print("\u2500"); System.out.println("\u2510");
+		System.out.println("\u2502                                     \u2508\u2509 Select Aircraft \u2509\u2508                                          \u2502");
+		
+	}
+	
 	public void breakBar() {
 		
 		System.out.print(" "); for (int i = 0; i < 100; i++) System.out.print("\u2500");
@@ -295,10 +302,21 @@ public class AirField {
 			System.out.println(" There are no aircraft on the airfield!");
 			return;
 		}
+		
+		selectAircraftBanner();
+		infoBanner();
 
-		listFleet(jetsOnAirfield);
-		System.out.println("Which aircraft would you like to fly?");
+		int counter = 1;
+
+		for (Jet jet : jetsOnAirfield) {			
+			jet.displayInfo(counter);
+			counter++;
+		}
+		breakBar();
+		System.out.print(" \u21f6 ");
 		int index = kb.nextInt();
+		kb.nextLine();
+		System.out.println();
 		Jet jetToFly = jetsOnAirfield.get(index - 1);
 		jetToFly.subMenu(kb);
 

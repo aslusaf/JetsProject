@@ -51,6 +51,7 @@ public abstract class AirSuperiority extends FighterJet implements AirToGround, 
 
 		if (lockedOnGround) {
 			System.out.println(" Bombs away.............target destroyed!");
+			lockedOnGround = false;
 		} else {
 			System.out.println(" You aren't locked on to a ground target.....");
 		}
@@ -202,6 +203,7 @@ public abstract class AirSuperiority extends FighterJet implements AirToGround, 
 			System.out.print("\u2514"); for (int i = 0; i < 52; i++) System.out.print("\u2500"); System.out.println("\u2518");
 			System.out.print(" \u21f6 ");
 			selection = kb.nextInt();
+			kb.nextLine();
 			System.out.println();
 
 

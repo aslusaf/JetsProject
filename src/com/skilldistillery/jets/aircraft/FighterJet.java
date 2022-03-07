@@ -170,7 +170,7 @@ public class FighterJet extends Jet implements AirToAir, Supersonic, InAirRefuel
 			System.out.println(" You are already connected to the boom!");
 		} else {
 			System.out.println(" Locks engaging.............connection complete!");
-			System.out.println(" Cleared to begin refuleing.");
+			System.out.println(" Cleared to begin refueling.");
 			connectedToBoom = true;
 		}
 
@@ -234,13 +234,12 @@ public class FighterJet extends Jet implements AirToAir, Supersonic, InAirRefuel
 			System.out.println("\u2502 11) Connect to fuel boom                           \u2502");
 			System.out.println("\u2502 12) Refuel in flight                               \u2502");
 			System.out.println("\u2502 13) Return to main menu                            \u2502");
-			System.out.print("\u2514");
-			for (int i = 0; i < 52; i++)
-				System.out.print("\u2500");
+			System.out.print("\u2514"); for (int i = 0; i < 52; i++) System.out.print("\u2500");
 			System.out.println("\u2518");
 			System.out.print(" \u21f6 ");
-
 			selection = kb.nextInt();
+			kb.nextLine();
+			System.out.println();
 
 			switch (selection) {
 			case (1):

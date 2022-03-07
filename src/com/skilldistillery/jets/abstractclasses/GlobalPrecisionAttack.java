@@ -63,8 +63,9 @@ public abstract class GlobalPrecisionAttack extends Jet implements AirToGround {
 			System.out.println("\u2502 5) Return to main menu                             \u2502");
 			System.out.print("\u2514"); for (int i = 0; i < 52; i++) System.out.print("\u2500"); System.out.println("\u2518");
 			System.out.print(" \u21f6 ");
-
 			selection = kb.nextInt();
+			kb.nextLine();
+			System.out.println();
 
 			switch (selection) {
 			case (1):

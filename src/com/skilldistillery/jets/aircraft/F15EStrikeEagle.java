@@ -95,13 +95,12 @@ public class F15EStrikeEagle extends FighterJet implements SuperCruiser {
 			System.out.println("\u2502 13) Connect to fuel boom                           \u2502");
 			System.out.println("\u2502 14) Refuel in flight                               \u2502");
 			System.out.println("\u2502 15) Return to main menu                            \u2502");
-			System.out.print("\u2514");
-			for (int i = 0; i < 52; i++)
-				System.out.print("\u2500");
+			System.out.print("\u2514"); for (int i = 0; i < 52; i++) System.out.print("\u2500");
 			System.out.println("\u2518");
 			System.out.print(" \u21f6 ");
-
 			selection = kb.nextInt();
+			kb.nextLine();
+			System.out.println();
 
 			switch (selection) {
 			case (1):
