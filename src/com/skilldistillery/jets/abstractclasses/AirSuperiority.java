@@ -14,8 +14,6 @@ public abstract class AirSuperiority extends FighterJet implements AirToGround, 
 	private boolean inStealthMode;
 	private boolean superCruiseEngaged;
 	
-	FighterJet fj = new FighterJet();
-
 	public AirSuperiority() {
 		super();
 		this.lockedOnGround = false;
@@ -132,7 +130,7 @@ public abstract class AirSuperiority extends FighterJet implements AirToGround, 
 			return;
 		}
 		
-		if (fj.isAfterburnersEngaged()) {
+		if (this.isAfterburnersEngaged()) {
 			if (superCruiseEngaged) {
 				System.out.println(" Supercruise is already engaged.....");
 			} else {
@@ -152,10 +150,10 @@ public abstract class AirSuperiority extends FighterJet implements AirToGround, 
 			return;
 		}
 		
-		if (fj.isAfterburnersEngaged() && superCruiseEngaged) {
+		if (this.isAfterburnersEngaged() && superCruiseEngaged) {
 			System.out.println(" Disengaging supercruise. Fuel burn increasing...");
 			superCruiseEngaged = false;
-		} else if (fj.isAfterburnersEngaged() && !superCruiseEngaged) {
+		} else if (this.isAfterburnersEngaged() && !superCruiseEngaged) {
 			System.out.println(" Supercruise isn't engaged.....");
 		} else {
 			System.out.println(" You can't engage supercruise, you don't even have the afterburners engaged.");
